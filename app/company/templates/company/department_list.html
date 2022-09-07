@@ -1,0 +1,4 @@
+<a href="{% url 'department-create' %}">Add Department</a>
+{% for department in objects %}
+	{{ department.code }}
+{% endfor %}
