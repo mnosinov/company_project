@@ -1,5 +1,7 @@
 <form method="post">
 	{% csrf_token %}
-	{{ form.as_p }}
+	<p>ID: {{ form.id }}</p>
+	<p>Code: {{ form.code }}</p>
+	<p>Name: {{ form.name }}</p>
 	<input type="Submit" value="Save">
 </form>

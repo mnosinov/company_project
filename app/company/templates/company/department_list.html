@@ -1,4 +1,20 @@
+{% load static %}
+
 <a href="{% url 'department-create' %}">Add Department</a>
-{% for department in objects %}
-	{{ department.code }}
+<a href="{% url 'department-create-manually' %}">Add Department Manually</a>
+
+<table border="1">
+	<caption>Departments</caption>
+	<tr>
+		<th>ID</th>
+		<th>Code</th>
+		<th>Name</th>
+	</tr>
+{% for department in object_list %}
+<tr>
+	<td>{{ department.id }}</td>
+	<td>{{ department.code }}</td>
+	<td>{{ department.name }}</td>
+</tr>
 {% endfor %}
+</table>

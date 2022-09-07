@@ -1,0 +1,10 @@
+{% if form.errors %}
+{{ form.errors }}
+{% endif %}
+<form method="post">
+	{% csrf_token %}
+	<p>ID: <input type="text" name="id"></p>
+	<p>Code:  <input type="text" name="code"></p>
+	<p>Name <input type="text" name="name"></p>
+	<input type="Submit" value="Save">
+</form>
